@@ -16,7 +16,6 @@ const client = new Discord.Client();
 
 //bot settings
 const prefix = '!';
-const ownerID = '498917866956128286';
 
 client.on('message', message =>{
 
@@ -47,4 +46,4 @@ client.on('ready', () => {
     console.log('Bot started');
 });
 
-client.login('NDk4OTE3ODY2OTU2MTI4Mjg2.Dp1dOg.9FqxsIzWkT7J-E8OYa3GsCYWc_c');
+client.login('token_here');
