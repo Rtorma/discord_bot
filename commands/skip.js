@@ -30,7 +30,7 @@ exports.run = async (client, message, args, ops) => {
         message.channel.send('Successfully skipped song!');
 
         //emit finish event
-        return fetched.dispatcher.emit('finish');
+        return fetched.dispatcher.emit('end');
     }
     
     //otherwise tell the channel the vote has been added
