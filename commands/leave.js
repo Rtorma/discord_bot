@@ -1,5 +1,5 @@
 // bot leaves the voice channel, if it is connected
-exports.run = (client, message, args) => {
+exports.run = (client, message, args, ops) => {
     
     if(!message.member.voiceChannel) return message.channel.send('connect to voice channel');
 
