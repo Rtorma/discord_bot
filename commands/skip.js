@@ -16,7 +16,7 @@ exports.run = async (client, message, args, ops) => {
     if (!fetched.queue[0].voteSkips) fetched.queue[0].voteSkips = [];
 
     //check if user already voted
-    if (fetched.queue[0].voteSkips.includes(message.member.id)) return essage.channel.send(`**HOLD UP!** You\'re already voted to skip! ${fetched.queue[0].voteSkips.length}/${requiredNum} required...`);
+    if (fetched.queue[0].voteSkips.includes(message.member.id)) return message.channel.send(`**HOLD UP!** You\'re already voted to skip! ${fetched.queue[0].voteSkips.length}/${requiredNum} required...`);
 
     //add user to voteSkips
     fetched.queue[0].voteSkips.push(message.member.id);

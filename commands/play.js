@@ -2,13 +2,13 @@ const ytdl = require('ytdl-core');
 
 exports.run = async (client, message, args, ops) => {
 
-    if (!message.member.voiceChannel) return message.channel.send('connect to voice channel');
+    if (!message.member.voiceChannel) return message.channel.send('Connect to voice channel bro');
 
-    if (!args[0]) return message.channel.send('url needed');
+    if (!args[0]) return message.channel.send('Can\'t see sh*t there m8');
 
     let validate = await ytdl.validateURL(args[0]);
 
-    if (!validate) return message.channel.send('not a valid url');
+    if (!validate) return message.channel.send('Not a valid link');
 
     //get song info here
     let info = await ytdl.getInfo(args[0]);
@@ -32,7 +32,7 @@ exports.run = async (client, message, args, ops) => {
     if (!data.dispatcher) play(client, ops, data); //play song, if there is nothing in queue
     else {
         //else add song to queue
-        message.channel.send(`Added to queue: ${info.title} | Requested By: ${message.author.id}`);
+        message.channel.send(`Added to queue: ${info.title} | Requested By: ${message.author}`);
     }
 
     //finaly, update the map
